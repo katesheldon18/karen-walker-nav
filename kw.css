@@ -1,0 +1,36 @@
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px 80px;
+}
+
+nav {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 80px;
+    border-bottom: 0.5px solid black;
+}
+
+.navItem {
+    display: inline-block;
+    padding: 8px; 
+}
+
+/* .subnavHeading {
+    display: inline-block;
+} */
+
+/* .subnavItem {
+    visibility: hidden;
+    text-align: left;
+} */
+
+.navItem:hover,
+subnavItem:hover {
+    cursor: pointer;
+}
+
