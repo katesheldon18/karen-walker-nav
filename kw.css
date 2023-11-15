@@ -1,36 +1,108 @@
 * {
-    font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  margin: 32px;
 }
 
 h1 {
-    text-align: center;
-    padding: 10px 80px;
+  text-align: center;
+  padding: 10px 80px;
+  font-size: 32px;
 }
 
-nav {
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 80px;
-    border-bottom: 0.5px solid black;
+.hamburger {
+  position: absolute;
+  left: 16px;
+  top: 16px;
 }
 
-.navItem {
-    display: inline-block;
-    padding: 8px; 
+.nav-desktop {
+  visibility: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 80px;
+  /* border-bottom: 0.5px solid black; */
+  position: relative;
 }
 
-/* .subnavHeading {
-    display: inline-block;
+.nav-item-desktop {
+  display: inline-block;
+  padding: 8px;
+}
+
+.menu-desktop {
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: calc(100% - 64px);
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.25s ease-in-out;
+  pointer-events: none;
+  text-align: left;
+  cursor: default;
+  padding: 16px 0;
+  border-top: 1px solid black;
+}
+
+.menu-heading-desktop {
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.menu-item-desktop {
+  font-weight: 300;
+}
+
+.nav-item-desktop:hover,
+.menu-item-desktop:hover,
+.nav-item-mobile:hover,
+.menu-item-mobile:hover {
+  cursor: pointer;
+}
+
+.nav-item-desktop:hover .menu {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu-column-desktop {
+  width: 200px;
+}
+
+@media (max-width: 1250px) {
+  .menu {
+    color: blueviolet;
+  }
+}
+
+.nav-mobile {
+
+}
+
+.nav-item-mobile {
+  /* margin-bottom: 32px; */
+padding-top: 24px;
+padding-bottom: 24px;
+}
+
+/* .menu-heading-mobile {
+  position: relative;
+  overflow: hidden;
 } */
 
-/* .subnavItem {
-    visibility: hidden;
-    text-align: left;
-} */
-
-.navItem:hover,
-subnavItem:hover {
-    cursor: pointer;
+.menu-item-mobile,
+.menu-heading-mobile {
+  position: relative;
+  overflow: hidden;
+  height: 0px;
 }
-
