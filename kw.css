@@ -85,9 +85,9 @@ h1 {
   }
 }
 
-.nav-mobile {
+/* .nav-mobile {
 
-}
+} */
 
 .nav-item-mobile {
   /* margin-bottom: 32px; */
@@ -105,4 +105,11 @@ padding-bottom: 24px;
   position: relative;
   overflow: hidden;
   height: 0px;
+}
+
+.checkbox {
+  opacity: 0;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
 }
