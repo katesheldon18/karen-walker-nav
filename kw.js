@@ -1,15 +1,40 @@
-const jewellery = document.getElementById("jewellery");
+Array.from(document.getElementsByClassName("nav-item-mobile")).forEach(
+  (element) => {
+    element.addEventListener("click", (e) => {
+      const element = e.target;
+      const menu = Array.from(element.getElementsByClassName("menu-mobile"))[0];
 
-jewellery.addEventListener("click", function (e) {
-  const target = e.target;
+      let menuHeight = 0;
+      const menuChildren = Array.from(menu.children);
+      for (i in menuChildren) {
+        const menuChild = menuChildren[i];
+        menuHeight = menuHeight + menuChild.getBoundingClientRect().height;
+      }
 
-  if (target.classList.contains("nav-item-mobile")) {
-    if (!target.classList.contains("expand")) {
-      navItem.classList.add("expand");
-      console.log("added class");
-    } else {
-      target.classList.remove("expand");
-      console.log("removed class");
-    }
+      if (!menu) {
+        return;
+      }
+      if (menu.style.height === "0px" || !menu.style.height) {
+        menu.style.height = menuHeight + "px";
+      } else {
+        menu.style.height = "0px";
+      }
+    });
   }
-});
+);
+
+// const jewellery = document.getElementById("jewellery");
+
+// jewellery.addEventListener("click", function (e) {
+//   const target = e.target;
+
+//   if (target.classList.contains("nav-item-mobile")) {
+//     if (!target.classList.contains("expand")) {
+//       navItem.classList.add("expand");
+//       console.log("added class");
+//     } else {
+//       target.classList.remove("expand");
+//       console.log("removed class");
+//     }
+//   }
+// });
