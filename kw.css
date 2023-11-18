@@ -22,12 +22,11 @@ h1 {
 }
 
 .nav-desktop {
-  visibility: hidden;
   text-align: center;
   display: flex;
   justify-content: space-between;
   padding: 0px 80px;
-  /* border-bottom: 0.5px solid black; */
+  border-bottom: 0.5px solid black;
   position: relative;
   font-weight: 600;
 }
@@ -38,12 +37,11 @@ h1 {
 }
 
 .menu-desktop {
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   left: 0;
   top: 100%;
   width: calc(100% - 64px);
-  background-color: lightblue;
   display: flex;
   justify-content: center;
   transition: opacity 0.25s ease-in-out;
@@ -73,7 +71,7 @@ h1 {
   cursor: pointer;
 }
 
-.nav-item-desktop:hover .menu {
+.nav-item-desktop:hover .menu-desktop {
   opacity: 1;
   pointer-events: all;
 }
@@ -82,12 +80,17 @@ h1 {
   width: 200px;
 }
 
-@media (max-width: 1250px) {
-  .menu {
-    color: blueviolet;
+@media (max-width: 1280px) {
+  .nav-desktop {
+    visibility: hidden;
   }
 }
 
+@media (min-width: 1280px) {
+  .nav-mobile {
+    visibility: hidden;
+  }
+}
 
 
 .nav-item-mobile {
